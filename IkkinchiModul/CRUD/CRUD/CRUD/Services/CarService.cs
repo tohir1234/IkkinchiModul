@@ -1,6 +1,4 @@
 ﻿using CRUD.Models;
-using System;
-using System.Collections.Generic;
 
 namespace CRUD.Services
 {
@@ -40,7 +38,7 @@ namespace CRUD.Services
 
         public List<Car> GetAllCars()
         {
-            return Cars;
+            return new List<Car>(Cars);
         }
 
         public void UpdateCar(Car updatedCar)
@@ -65,6 +63,7 @@ namespace CRUD.Services
                 existingCar.CarPrice = updatedCar.CarPrice;
                 existingCar.CarSpeed = updatedCar.CarSpeed;
                 existingCar.Created = updatedCar.Created;
+                existingCar.UpdatedAd = DateTime.UtcNow;
 
             }
         }

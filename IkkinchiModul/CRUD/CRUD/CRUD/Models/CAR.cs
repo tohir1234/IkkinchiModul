@@ -16,6 +16,7 @@ namespace CRUD.Models
         public int CarPrice {  get; set; }
         public int CarSpeed { get; set; }
         public DateTime Created {  get; set; }
+        public DateTime? UpdatedAd { get; set; }
 
     }
 }
